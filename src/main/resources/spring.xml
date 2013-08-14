@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id = "bike" class = "org.lvypas.bws.Bike">
+		<property name="bikeName" value="Specialized" />
+		<property name="frame" ref="frame" />
+		<property name="frontWheel" ref="fWheel" />
+		<property name="rearWheel" ref="rWheel" />
+	</bean>	
+	
+	<bean id = "fWheel" class = "org.lvypas.bws.FrontWheel">
+		<property name="componentName" value="Mavic crossmax front" />
+		<property name="weight" value="900" />
+		<property name="countSpokes" value="32" />
+		<property name="hub" value="DT-Swiss" />
+	</bean>
+	
+	<bean id = "rWheel" class = "org.lvypas.bws.RearWheel">
+		<property name="componentName" value="Mavic crossmax rear" />
+		<property name="weight" value="1100" />
+		<property name="countSpokes" value="32" />
+		<property name="hub" value="DT-Swiss" />
+	</bean>
+	
+	<bean id = "frame" class = "org.lvypas.bws.Frame">
+		<property name="componentName" value="M4 Aluminium frame" />
+		<property name="weight" value="1300" />
+		<property name="size" value="54" />		
+	</bean>
+
+</beans>
